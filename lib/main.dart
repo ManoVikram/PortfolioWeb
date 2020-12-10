@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import './screens/homeScreen.dart';
+
 class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();
@@ -17,6 +19,7 @@ class _MyAppState extends State<MyApp> {
         primaryColorDark: Colors.blueGrey[900],
         fontFamily: GoogleFonts.openSans().fontFamily,
       ),
+      home: Portfolio(),
     );
   }
 }
@@ -24,6 +27,10 @@ class _MyAppState extends State<MyApp> {
 class Portfolio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: HomeScreen(),
+    );
   }
 }
+
+void main() => runApp(MyApp());
